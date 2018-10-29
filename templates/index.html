@@ -4,11 +4,26 @@
   <head>
     <title>Diabetes Risk Predictor</title>
   </head>
-  <body>
+  <body style="background-color:#23272a; color: #3ebca3">
     <main role="main" class="container">
+      <img class="mt-5" src="https://lh3.googleusercontent.com/egwnY6_kOMQ2mB3XIjxLWurVeXaM1p8S2D2Xt5140mA4xwJvc_vlVYL-DoybOgKL2kDkLy8kM_AMuvqrHZRnA-B-57IE8EpABP6bPUdJ8-WvT0VK24d-ULNxVbijVudQgRwIl_wQ3wmohHaj1JwlbdgTZhwXfvB6CVwUIsjQLJ2_5L-BaWbwBTppaurcCG5LUVebGIek9KEqFBouFliaDuVN9AVUAWdEHgYYF-2BAWrINSJVsnqejcbnpjUZ0aoJZCCMj7FpD-8HpIJeKsVUhl8BJhxVAWrVIw--uCNKXzZ5NPDCbCIUEx_tYTGxd5cBF4Mt75qvwSPm-peEVfnhJm0Azt38d1rYSDNfJLIokTcvQOSfxHNLE-BxFz1Cooi4O6Pf6iVvj3l5pMIrb2pXM_ihjuFutTMV0q5Jv2IyZtJxcPYZd3Z4xh8Nu6Yl1QtXZSi0ZUBJ3vrBIz6GgffKtR46sbbq5ghA_M_oYZVXfiyM9SImg5-voOlmHib9kkPlS6EKfUWF75AQVMpThpYSH_WnBt3N9-0Xp154-r6wSRssIFj_K-bRUwIGvKtKG2AllCPKSQcYy8Nfk0qq0Bx_imjq0LCN_jSHleF-R2vK9BWIZoZJBC5Kfqy0pl1uTNfad5v-V8-0k3wxpVf61tztv-KkFw=w857-h790-no" style="height: 150px"/>
       <h1 class="mt-5">Are you at risk for diabetes?</h1>
       <p>Enter some data about yourself below and we will predict your likelihood of contracting diabetes using machine learning. Predictions are based on data provided by the University of California Irvine's Pima Indians Diabetes Database, available on <a href="https://www.kaggle.com/uciml/pima-indians-diabetes-database" target="_blank">Kaggle</a>.</p>
       <p><em>Disclaimer: This is not a substitute for a medical professional's assessment of risk.</em></p>
+      {% from "_formhelpers.html" import render_field %}
+      <form method=post>
+        <dl>
+          {{ render_field(form.age) }}
+          {{ render_field(form.bmi) }}
+          {{ render_field(form.bp) }}
+          {{ render_field(form.glucose) }}
+          {{ render_field(form.insulin) }}
+          {{ render_field(form.skin) }}
+          {{ render_field(form.pregnancies) }}
+          {{ render_field(form.accept_tos) }}
+        </dl>
+        <p><input type=submit value=Register>
+      </form>
     </main>
   </body>
 </html>
