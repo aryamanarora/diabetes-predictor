@@ -2,7 +2,6 @@ from flask import Flask, request, json, Response, redirect, url_for, render_temp
 from wtforms import Form, BooleanField, StringField, PasswordField, IntegerField, FloatField, validators
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 
@@ -50,6 +49,6 @@ def main():
         )
         for i in res.tolist():
             print(i)
-        return render_template("result.html", res=int(res[0][0] * 100))
+        return render_template("result.html", res=int(res[0][1] * 100))
         
     return render_template("index.html", form=form)
