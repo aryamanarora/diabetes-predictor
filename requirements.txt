@@ -53,7 +53,7 @@ Pillow==5.0.0
 prompt-toolkit==1.0.15
 ptyprocess==0.5.2
 pygame==1.9.3
-Pygments==2.2.0
+Pygments==2.7.4
 pylint==2.0.1
 pymongo==3.7.2
 PyMsgBox==1.0.6
