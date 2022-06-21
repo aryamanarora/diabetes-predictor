@@ -40,7 +40,7 @@ nbconvert==5.3.1
 nbformat==4.4.0
 nltk==3.3
 notebook==5.2.2
-numpy==1.13.3
+numpy==1.22.0
 nxt-python==2.2.2
 oauthlib==2.1.0
 opencv-python==3.4.0.12
